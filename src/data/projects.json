@@ -1,15 +1,21 @@
 [
   {
     "id": "148b8ab3-f312-4432-bbec-3d3dcae4ec76",
-    "title": "Smart inbox",
-    "description": "sart inbox",
+    "title": "Onebox",
+    "description": "OneInbox is an advanced, unified omnichannel communication platform that centralizes messages from various channels like WhatsApp Business, Instagram, Facebook Messenger, and Email into a single dashboard, allowing support teams to manage and reply to all customer conversations without switching apps. The application features an AI-powered \"Smart Priorities\" engine that automatically analyzes message intent to classify conversations into Urgent, Priority, or Needs Response queues based on critical customer actions such as refund requests or bulk orders. Additionally, it integrates an in-depth Customer History CRM that displays rich contextual data right alongside the chat—including contact details, order frequency, and financial metrics like Lifetime Value (LTV)—while offering a robust Ticket Status Tracking system, granular notification preferences, secure Google SSO authentication, and seamless Light/Dark theme switching to dramatically slash business response times.",
     "tech_stack": [
       "React , Node js , Firebase"
     ],
     "images": [
-      "/assets/images/projects/1782382934139-0-WhatsApp-Image-2026-06-24-at-12.53.15-AM.jpeg",
-      "/assets/images/projects/1782382936381-1-WhatsApp-Image-2026-06-24-at-12.53.14-AM.jpeg",
-      "/assets/images/projects/1782382938207-2-WhatsApp-Image-2026-06-24-at-12.52.48-AM.jpeg"
+      "/assets/images/projects/1782413257529-0-Screenshot-2026-06-25-113917.jpg",
+      "/assets/images/projects/1782413259558-1-Screenshot-2026-06-25-114006.jpg",
+      "/assets/images/projects/1782413261655-2-Screenshot-2026-06-25-114031.jpg",
+      "/assets/images/projects/1782413263752-3-Screenshot-2026-06-25-114054.jpg",
+      "/assets/images/projects/1782413265672-4-Screenshot-2026-06-25-114108.jpg",
+      "/assets/images/projects/1782413267433-5-Screenshot-2026-06-25-114124.jpg",
+      "/assets/images/projects/1782413269232-6-Screenshot-2026-06-25-114155.jpg",
+      "/assets/images/projects/1782413271227-7-Screenshot-2026-06-25-114223.jpg",
+      "/assets/images/projects/1782413273276-8-Screenshot-2026-06-25-114244.jpg"
     ],
     "category": "Web",
     "live_url": "",
