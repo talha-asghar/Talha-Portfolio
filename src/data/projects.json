@@ -1,15 +1,48 @@
 [
   {
     "id": "148b8ab3-f312-4432-bbec-3d3dcae4ec76",
-    "title": "Smart inbox",
-    "description": "sart inbox",
+    "title": "Onebox",
+    "description": "OneInbox is an advanced, unified omnichannel communication platform that centralizes messages from various channels like WhatsApp Business, Instagram, Facebook Messenger, and Email into a single dashboard, allowing support teams to manage and reply to all customer conversations without switching apps. The application features an AI-powered \"Smart Priorities\" engine that automatically analyzes message intent to classify conversations into Urgent, Priority, or Needs Response queues based on critical customer actions such as refund requests or bulk orders. Additionally, it integrates an in-depth Customer History CRM that displays rich contextual data right alongside the chat—including contact details, order frequency, and financial metrics like Lifetime Value (LTV)—while offering a robust Ticket Status Tracking system, granular notification preferences, secure Google SSO authentication, and seamless Light/Dark theme switching to dramatically slash business response times.",
     "tech_stack": [
       "React , Node js , Firebase"
     ],
     "images": [
-      "/assets/images/projects/1782382934139-0-WhatsApp-Image-2026-06-24-at-12.53.15-AM.jpeg",
-      "/assets/images/projects/1782382936381-1-WhatsApp-Image-2026-06-24-at-12.53.14-AM.jpeg",
-      "/assets/images/projects/1782382938207-2-WhatsApp-Image-2026-06-24-at-12.52.48-AM.jpeg"
+      "/assets/images/projects/1782413257529-0-Screenshot-2026-06-25-113917.jpg",
+      "/assets/images/projects/1782413259558-1-Screenshot-2026-06-25-114006.jpg",
+      "/assets/images/projects/1782413261655-2-Screenshot-2026-06-25-114031.jpg",
+      "/assets/images/projects/1782413263752-3-Screenshot-2026-06-25-114054.jpg",
+      "/assets/images/projects/1782413265672-4-Screenshot-2026-06-25-114108.jpg",
+      "/assets/images/projects/1782413267433-5-Screenshot-2026-06-25-114124.jpg",
+      "/assets/images/projects/1782413269232-6-Screenshot-2026-06-25-114155.jpg",
+      "/assets/images/projects/1782413271227-7-Screenshot-2026-06-25-114223.jpg",
+      "/assets/images/projects/1782413273276-8-Screenshot-2026-06-25-114244.jpg"
+    ],
+    "category": "Web",
+    "live_url": "",
+    "code_url": "",
+    "sort_order": 0
+  },
+  {
+    "id": "f04d7c92-af5b-454c-b696-3018c10984f6",
+    "title": "Homevista",
+    "description": "This project is a high-performance, full-stack real estate platform inspired by the core functionalities of Zillow, but heavily enhanced with tailored, localized discovery features. While it offers standard Zillow capabilities—such as property listings, advanced filtering, and interactive mapping—it addresses a critical gap in traditional real estate applications: proactive opportunity tracking.\n\nThrough an innovative \"Smart Area & Society Intel\" engine, the platform allows users to select specific geographical regions or housing sectors to receive dynamic, real-time alerts on upcoming housing schemes, infrastructure updates, and deep price-drop analytics. Instead of just browsing what is currently on the market, users get a predictive look at where the market is moving next.",
+    "tech_stack": [
+      "React",
+      "Node js",
+      "express js",
+      "Mongo db"
+    ],
+    "images": [
+      "/assets/images/projects/1782412513319-0-Screenshot-2026-06-25-111440.png.jpg",
+      "/assets/images/projects/1782412515298-1-Screenshot-2026-06-25-111535.jpg",
+      "/assets/images/projects/1782412517834-2-Screenshot-2026-06-25-111607.jpg",
+      "/assets/images/projects/1782412520235-3-Screenshot-2026-06-25-111735.jpg",
+      "/assets/images/projects/1782412522280-4-Screenshot-2026-06-25-111806.jpg",
+      "/assets/images/projects/1782412524103-5-Screenshot-2026-06-25-111844.jpg",
+      "/assets/images/projects/1782412525846-6-Screenshot-2026-06-25-111920.jpg",
+      "/assets/images/projects/1782412527545-7-Screenshot-2026-06-25-112052.jpg",
+      "/assets/images/projects/1782412529531-8-Screenshot-2026-06-25-112304.jpg",
+      "/assets/images/projects/1782412531534-9-Screenshot-2026-06-25-113210.jpg"
     ],
     "category": "Web",
     "live_url": "",
