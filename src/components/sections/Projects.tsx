@@ -11,7 +11,7 @@ function ImageCarousel({ images }: { images: string[] }) {
 
   return (
     <div className="relative rounded-2xl overflow-hidden">
-      <div className="relative h-64 overflow-hidden bg-white/5">
+      <div className="relative h-[320px] overflow-hidden bg-white/5">
         <AnimatePresence mode="wait">
           <motion.img
             key={idx}
@@ -71,7 +71,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 40, scale: 0.96 }}
         transition={{ type: 'spring', stiffness: 280, damping: 26 }}
-        className="glass-strong rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        className="glass-strong rounded-3xl w-full max-w-7xl max-h-[120vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 pb-0">

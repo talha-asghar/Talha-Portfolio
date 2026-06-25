@@ -6,7 +6,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import type { ReactNode } from 'react';
-
+import CursorFollower from './components/Cursorfollower';
 function ProtectedRoute({ children }: { children: ReactNode }) {
   const { isAuthenticated } = useAuth();
   if (!isAuthenticated) return <Navigate to="/admin" replace />;
@@ -15,9 +15,11 @@ function ProtectedRoute({ children }: { children: ReactNode }) {
 
 export default function App() {
   return (
+    
     <ToastProvider>
       <PortfolioProvider>
         <AuthProvider>
+          <CursorFollower />
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<PortfolioPage />} />
