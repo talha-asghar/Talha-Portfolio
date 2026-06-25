@@ -3,7 +3,9 @@
     "id": "148b8ab3-f312-4432-bbec-3d3dcae4ec76",
     "title": "Smart inbox",
     "description": "sart inbox",
-    "tech_stack": [],
+    "tech_stack": [
+      "React , Node js , Firebase"
+    ],
     "images": [
       "/assets/images/projects/1782382934139-0-WhatsApp-Image-2026-06-24-at-12.53.15-AM.jpeg",
       "/assets/images/projects/1782382936381-1-WhatsApp-Image-2026-06-24-at-12.53.14-AM.jpeg",
