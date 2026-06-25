@@ -1,6 +1,8 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
-import { supabase } from '../lib/supabase';
 import type { Project, Service, Skill, ProjectInput, ServiceInput, SkillInput } from '../types';
+import projectsData from '../data/projects.json';
+import servicesData from '../data/services.json';
+import skillsData from '../data/skills.json';
 
 interface PortfolioContextValue {
   projects: Project[];
@@ -20,97 +22,98 @@ interface PortfolioContextValue {
 
 const PortfolioContext = createContext<PortfolioContextValue | undefined>(undefined);
 
+function base64DecodeUnicode(base64: string) {
+  const binary = atob(base64);
+  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
 export function PortfolioProvider({ children }: { children: ReactNode }) {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [services, setServices] = useState<Service[]>([]);
-  const [skills, setSkills] = useState<Skill[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>(projectsData);
+  const [services, setServices] = useState<Service[]>(servicesData);
+  const [skills, setSkills] = useState<Skill[]>(skillsData);
+  const [loading, setLoading] = useState(false);
 
-  // Initial load
+  // Fetch projects from GitHub every 2 seconds to sync with admin panel changes
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const [p, s, sk] = await Promise.all([
-        supabase.from('projects').select('*').order('sort_order'),
-        supabase.from('services').select('*').order('sort_order'),
-        supabase.from('skills').select('*').order('sort_order'),
-      ]);
-      if (cancelled) return;
-      if (p.data) setProjects(p.data as Project[]);
-      if (s.data) setServices(s.data as Service[]);
-      if (sk.data) setSkills(sk.data as Skill[]);
-      setLoading(false);
-    })();
-    return () => { cancelled = true; };
-  }, []);
+    const token = import.meta.env.VITE_GITHUB_TOKEN as string;
+    if (!token) return;
 
-  // Realtime subscriptions — UI updates instantly when DB changes
-  useEffect(() => {
-    const ch = supabase.channel('portfolio-realtime')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'projects' },
-        () => { supabase.from('projects').select('*').order('sort_order').then(({ data }) => data && setProjects(data as Project[])); })
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'services' },
-        () => { supabase.from('services').select('*').order('sort_order').then(({ data }) => data && setServices(data as Service[])); })
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'skills' },
-        () => { supabase.from('skills').select('*').order('sort_order').then(({ data }) => data && setSkills(data as Skill[])); })
-      .subscribe();
-    return () => { supabase.removeChannel(ch); };
+    const fetchFromGithub = async () => {
+      try {
+        const response = await fetch('https://api.github.com/repos/talha-asghar/Talha-Portfolio/contents/src/data/projects.json', {
+          method: 'GET',
+          headers: {
+            Authorization: `token ${token}`,
+            Accept: 'application/vnd.github+json',
+          },
+        });
+        if (response.ok) {
+          const data = await response.json() as { content: string };
+          const content = data.content?.replace(/\n/g, '');
+          if (content) {
+            const projectsArray = JSON.parse(base64DecodeUnicode(content)) as Project[];
+            setProjects(projectsArray.sort((a, b) => a.sort_order - b.sort_order));
+          }
+        }
+      } catch (err) {
+        // Silently fail - keep using local data
+        console.debug('Failed to fetch from GitHub, using local data');
+      }
+    };
+
+    const interval = setInterval(fetchFromGithub, 2000);
+    return () => clearInterval(interval);
   }, []);
 
   // Projects
   const addProject = useCallback(async (input: ProjectInput) => {
-    const { data, error } = await supabase.from('projects').insert(input).select().single();
-    if (error) throw error;
-    if (data) setProjects((prev) => [...prev, data as Project].sort((a, b) => a.sort_order - b.sort_order));
+    const newProject: Project = {
+      id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      ...input,
+    };
+    setProjects((prev) => [...prev, newProject].sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const updateProject = useCallback(async (id: string, input: Partial<ProjectInput>) => {
-    const { data, error } = await supabase.from('projects').update(input).eq('id', id).select().single();
-    if (error) throw error;
-    if (data) setProjects((prev) => prev.map((p) => (p.id === id ? data as Project : p)).sort((a, b) => a.sort_order - b.sort_order));
+    setProjects((prev) => prev.map((p) => (p.id === id ? { ...p, ...input } : p)).sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const deleteProject = useCallback(async (id: string) => {
-    const { error } = await supabase.from('projects').delete().eq('id', id);
-    if (error) throw error;
     setProjects((prev) => prev.filter((p) => p.id !== id));
   }, []);
 
   // Services
   const addService = useCallback(async (input: ServiceInput) => {
-    const { data, error } = await supabase.from('services').insert(input).select().single();
-    if (error) throw error;
-    if (data) setServices((prev) => [...prev, data as Service].sort((a, b) => a.sort_order - b.sort_order));
+    const newService: Service = {
+      id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      ...input,
+    };
+    setServices((prev) => [...prev, newService].sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const updateService = useCallback(async (id: string, input: Partial<ServiceInput>) => {
-    const { data, error } = await supabase.from('services').update(input).eq('id', id).select().single();
-    if (error) throw error;
-    if (data) setServices((prev) => prev.map((s) => (s.id === id ? data as Service : s)).sort((a, b) => a.sort_order - b.sort_order));
+    setServices((prev) => prev.map((s) => (s.id === id ? { ...s, ...input } : s)).sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const deleteService = useCallback(async (id: string) => {
-    const { error } = await supabase.from('services').delete().eq('id', id);
-    if (error) throw error;
     setServices((prev) => prev.filter((s) => s.id !== id));
   }, []);
 
   // Skills
   const addSkill = useCallback(async (input: SkillInput) => {
-    const { data, error } = await supabase.from('skills').insert(input).select().single();
-    if (error) throw error;
-    if (data) setSkills((prev) => [...prev, data as Skill].sort((a, b) => a.sort_order - b.sort_order));
+    const newSkill: Skill = {
+      id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      ...input,
+    };
+    setSkills((prev) => [...prev, newSkill].sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const updateSkill = useCallback(async (id: string, input: Partial<SkillInput>) => {
-    const { data, error } = await supabase.from('skills').update(input).eq('id', id).select().single();
-    if (error) throw error;
-    if (data) setSkills((prev) => prev.map((s) => (s.id === id ? data as Skill : s)).sort((a, b) => a.sort_order - b.sort_order));
+    setSkills((prev) => prev.map((s) => (s.id === id ? { ...s, ...input } : s)).sort((a, b) => a.sort_order - b.sort_order));
   }, []);
 
   const deleteSkill = useCallback(async (id: string) => {
-    const { error } = await supabase.from('skills').delete().eq('id', id);
-    if (error) throw error;
     setSkills((prev) => prev.filter((s) => s.id !== id));
   }, []);
 

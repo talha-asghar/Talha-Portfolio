@@ -26,7 +26,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen text-white flex">
-      <aside className={`fixed lg:sticky top-0 left-0 h-screen w-64 glass-strong border-r border-white/10 z-40 flex flex-col transition-transform duration-300 ${
+      <aside className={`fixed lg:sticky top-0 left-0 h-screen w-64 glass-strong  z-40 flex flex-col transition-transform duration-300 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div className="p-6 flex items-center gap-2 font-display font-bold text-lg text-white border-b border-white/10">
@@ -45,7 +45,7 @@ export default function AdminDashboard() {
             </button>
           ))}
         </nav>
-        <div className="p-3 space-y-1 border-t border-white/10">
+        <div className="p-3 space-y-1">
           <Link to="/" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/5 transition-colors">
             <Home className="w-4 h-4" /> View Site
           </Link>

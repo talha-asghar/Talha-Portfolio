@@ -8,8 +8,8 @@ interface AuthContextValue {
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-const ADMIN_USER = 'admin';
-const ADMIN_PASS = 'password123';
+const ADMIN_USER = 'talha';
+const ADMIN_PASS = '54m4v14@54';
 const STORAGE_KEY = 'portfolio_admin_auth';
 
 export function AuthProvider({ children }: { children: ReactNode }) {

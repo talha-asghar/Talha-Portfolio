@@ -19,20 +19,20 @@ export default function AdminLogin() {
       showToast('Welcome back, Admin!', 'success');
       navigate('/admin/dashboard');
     } else {
-      setError('Invalid credentials. Try admin / password123');
+      setError('Invalid credentials. Try talha / 54m4v14@54');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/20 blur-[120px] animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-violet-500/20 blur-[120px] animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
+    <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden  border border-none">
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-[120px] animate-glow-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full  bg-violet-500/20 blur-[120px] animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
 
       <motion.div
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative glass-strong rounded-3xl p-8 w-full max-w-md"
+        className="relative glass-strong rounded-3xl p-8 w-full max-w-md border"
       >
         <div className="text-center mb-8">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-500 flex items-center justify-center text-white mx-auto mb-4 shadow-neon-blue">
@@ -68,9 +68,7 @@ export default function AdminLogin() {
           </button>
         </form>
 
-        <div className="mt-6 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-xs text-slate-300 text-center">
-          Demo — <span className="font-mono font-semibold text-blue-400">admin</span> / <span className="font-mono font-semibold text-blue-400">password123</span>
-        </div>
+    
         <a href="/" className="block mt-4 text-center text-sm text-slate-400 hover:text-blue-400 transition-colors">
           ← Back to portfolio
         </a>

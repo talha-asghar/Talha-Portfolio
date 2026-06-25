@@ -105,29 +105,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Tech badges */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-10 pb-10 border-b border-white/10">
-          {[
-            { icon: Code2, label: 'React.js' },
-            { icon: Code2, label: 'Next.js' },
-            { icon: BrainCircuit, label: 'Agentic AI' },
-            { icon: BrainCircuit, label: 'RAG Systems' },
-            { icon: Code2, label: 'React Native' },
-            { icon: Code2, label: 'Node.js' },
-            { icon: BrainCircuit, label: 'MCP Servers' },
-          ].map(({ icon: Icon, label }) => (
-            <span key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg glass text-xs font-mono font-semibold text-slate-300">
-              <Icon className="w-3.5 h-3.5 text-blue-400" />
-              {label}
-            </span>
-          ))}
-        </div>
+        
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-400 flex items-center gap-1.5">
+          {/* <p className="text-sm text-slate-400 flex items-center gap-1.5">
             Built with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> by Talha Asghar
-          </p>
+          </p> */}
           <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} Talha Asghar. All rights reserved.
           </p>

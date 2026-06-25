@@ -22,11 +22,10 @@ export default function Navbar() {
   }, []);
 
   const handleDownload = () => {
-    const content = `TALHA ASGHAR\nFrontend & AI Developer\n\nContact: ta449011@gmail.com | 03089460061\nGitHub: github.com/talha-54-ism\nLinkedIn: linkedin.com/in/talha-asghar\n\nExperience:\nFull-Stack & AI Developer — f3 technologies (July 2023 - Present)\n\nEducation:\nBS Software Engineering — COMSATS University Islamabad (2019-2023)`;
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(new Blob([content], { type: 'text/plain' }));
-    a.download = 'Talha_Asghar_CV.txt';
-    a.click();
+  const link = document.createElement('a');
+  link.href = '/Talha_Asghar_FullStack_resume.pdf'; // public folder ka path (bina 'public' likhe)
+  link.download = 'Talha_Asghar_FullStack_resume.pdf';
+  link.click();
   };
 
   return (
@@ -36,7 +35,7 @@ export default function Navbar() {
       transition={{ type: 'spring', stiffness: 200, damping: 25, delay: 0.1 }}
       className="fixed top-4 inset-x-0 z-50 flex justify-center px-4"
     >
-      <div className={`flex items-center justify-between gap-2 transition-all duration-300 rounded-2xl px-3 py-2 w-full max-w-3xl ${
+      <div className={`flex items-center justify-between gap-2  transition-all duration-300  rounded-full px-3 py-4 w-full max-w-7xl ${
         scrolled ? 'glass-strong' : 'glass'
       }`}>
         <a href="#hero" className="flex items-center gap-2 font-display font-bold text-base text-white shrink-0 pl-1">
