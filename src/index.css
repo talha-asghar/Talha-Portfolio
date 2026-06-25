@@ -4,15 +4,42 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
+  
   body {
     @apply font-sans antialiased;
-    /* Fixed tech mesh wallpaper — stays in place while scrolling */
     background-color: #0a0a1a;
-    background-image: url('/assets/images/mesh-wallpaper.svg');
+    position: relative;
+    z-index: 0;
+  }
+
+  /* Fixed tech mesh wallpaper with blur effect */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2; /* Isko mazeed peeche kar diya takay vignette iske upar aaye */
+    
+    background-image: url('/assets/images/technology-mesh.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    filter: blur(9px); 
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+
+  /* NEW: Edges ko smooth dark (vignette) karne ke liye */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1; /* Yeh wallpaper ke upar aur content ke peeche rahega */
+    pointer-events: none; /* Takay click wagera block na hon */
+    
+    /* Beech se transparent aur kinaray (edges) se dark color */
+    background: radial-gradient(circle, rgba(10,10,26,0) 40%, rgba(10,10,26,0.85) 100%);
   }
 }
 
@@ -51,6 +78,7 @@
   }
 }
 
+/* Scrollbar styles */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: rgba(10,10,26,0.5); }
 ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.4); border-radius: 9999px; }
