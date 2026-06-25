@@ -19,7 +19,7 @@ export default function AdminLogin() {
       showToast('Welcome back, Admin!', 'success');
       navigate('/admin/dashboard');
     } else {
-      setError('Invalid credentials. Try talha / 54m4v14@54');
+      setError('Invalid credentials');
     }
   };
 
