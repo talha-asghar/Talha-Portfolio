@@ -1,0 +1,30 @@
+[
+  {
+    "id": "svc-1",
+    "title": "AI & RAG Integration",
+    "description": "Designing RAG workflows, managing MCP servers to connect LLMs with custom data sources and enterprise knowledge bases.",
+    "icon": "BrainCircuit",
+    "sort_order": 1
+  },
+  {
+    "id": "svc-2",
+    "title": "Full-Stack Web Development",
+    "description": "Engineering responsive web architectures using React.js, Next.js, and Node.js with scalable cloud-ready backends.",
+    "icon": "Code2",
+    "sort_order": 2
+  },
+  {
+    "id": "svc-3",
+    "title": "Mobile App Development",
+    "description": "Building cross-platform native apps via React Native with smooth UX and native performance on iOS and Android.",
+    "icon": "Smartphone",
+    "sort_order": 3
+  },
+  {
+    "id": "svc-4",
+    "title": "Advanced AI Automation",
+    "description": "Orchestrating Agentic AI models and automating complex multi-step workflows to boost operational efficiency.",
+    "icon": "Workflow",
+    "sort_order": 4
+  }
+]

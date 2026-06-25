@@ -1,0 +1,32 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Healthcare Enterprise Suite",
+    "description": "A comprehensive enterprise-grade healthcare platform built for global deployment. Engineered real-time smart alert systems, Caller modules, MDT (Multi-Disciplinary Team) collaboration tools, EPCR (Electronic Patient Care Reporting), and advanced Patient Reports. The platform integrates with FHIR standards for seamless interoperability across healthcare systems and supports thousands of concurrent users.",
+    "tech_stack": ["React", "Next.js", "Node.js", "FHIR Framework", "TypeScript", "PostgreSQL", "Redis"],
+    "images": [
+      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "category": "Web",
+    "live_url": "https://github.com/talha-54-ism",
+    "code_url": "https://github.com/talha-54-ism",
+    "sort_order": 1
+  },
+  {
+    "id": "proj-2",
+    "title": "Fashion Valley (AI E-Commerce)",
+    "description": "An AI-powered fashion e-commerce platform featuring personalized product recommendations using the Apriori Algorithm for association rule mining. Built a visual image-upload search engine that lets users find similar products by uploading a photo. Integrated real-time inventory management, dynamic pricing, and a Firebase-backed user behavior analytics dashboard.",
+    "tech_stack": ["Python", "Apriori Algorithm", "Firebase", "React", "Machine Learning", "Computer Vision"],
+    "images": [
+      "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "category": "AI",
+    "live_url": "https://github.com/talha-54-ism",
+    "code_url": "https://github.com/talha-54-ism",
+    "sort_order": 2
+  }
+]

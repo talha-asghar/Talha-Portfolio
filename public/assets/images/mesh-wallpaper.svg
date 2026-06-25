@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1a1a3e"/>
+      <stop offset="50%" stop-color="#0f0f2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Ambient color glows -->
+  <circle cx="300" cy="200" r="400" fill="url(#glow1)"/>
+  <circle cx="1600" cy="300" r="350" fill="url(#glow2)"/>
+  <circle cx="960" cy="800" r="450" fill="url(#glow3)"/>
+  <circle cx="200" cy="900" r="300" fill="url(#glow2)"/>
+  <circle cx="1700" cy="850" r="350" fill="url(#glow1)"/>
+
+  <!-- Tech mesh network -->
+  <g filter="url(#blur)" opacity="0.6">
+    <!-- Connection lines -->
+    <g stroke="url(#lineGrad)" stroke-width="1" fill="none">
+      <line x1="120" y1="180" x2="380" y2="320"/>
+      <line x1="380" y1="320" x2="620" y2="150"/>
+      <line x1="620" y1="150" x2="880" y2="280"/>
+      <line x1="880" y1="280" x2="1120" y2="180"/>
+      <line x1="1120" y1="180" x2="1380" y2="340"/>
+      <line x1="1380" y1="340" x2="1620" y2="220"/>
+      <line x1="1620" y1="220" x2="1780" y2="380"/>
+      <line x1="380" y1="320" x2="520" y2="540"/>
+      <line x1="520" y1="540" x2="780" y2="480"/>
+      <line x1="780" y1="480" x2="1020" y2="620"/>
+      <line x1="1020" y1="620" x2="1280" y2="520"/>
+      <line x1="1280" y1="520" x2="1520" y2="640"/>
+      <line x1="1520" y1="640" x2="1720" y2="560"/>
+      <line x1="120" y1="180" x2="280" y2="420"/>
+      <line x1="280" y1="420" x2="520" y2="540"/>
+      <line x1="780" y1="480" x2="940" y2="380"/>
+      <line x1="940" y1="380" x2="1120" y2="180"/>
+      <line x1="940" y1="380" x2="1020" y2="620"/>
+      <line x1="1280" y1="520" x2="1380" y2="340"/>
+      <line x1="1520" y1="640" x2="1620" y2="220"/>
+      <line x1="280" y1="420" x2="180" y2="680"/>
+      <line x1="180" y1="680" x2="420" y2="820"/>
+      <line x1="420" y1="820" x2="680" y2="760"/>
+      <line x1="680" y1="760" x2="920" y2="880"/>
+      <line x1="920" y1="880" x2="1180" y2="800"/>
+      <line x1="1180" y1="800" x2="1420" y2="900"/>
+      <line x1="1420" y1="900" x2="1680" y2="820"/>
+      <line x1="680" y1="760" x2="780" y2="480"/>
+      <line x1="920" y1="880" x2="1020" y2="620"/>
+      <line x1="1180" y1="800" x2="1280" y2="520"/>
+      <line x1="1420" y1="900" x2="1520" y2="640"/>
+    </g>
+
+    <!-- Nodes -->
+    <g fill="#3b82f6" opacity="0.4">
+      <circle cx="120" cy="180" r="4"/>
+      <circle cx="380" cy="320" r="5"/>
+      <circle cx="620" cy="150" r="4"/>
+      <circle cx="880" cy="280" r="5"/>
+      <circle cx="1120" cy="180" r="4"/>
+      <circle cx="1380" cy="340" r="5"/>
+      <circle cx="1620" cy="220" r="4"/>
+      <circle cx="1780" cy="380" r="4"/>
+      <circle cx="280" cy="420" r="4"/>
+      <circle cx="520" cy="540" r="5"/>
+      <circle cx="780" cy="480" r="4"/>
+      <circle cx="940" cy="380" r="5"/>
+      <circle cx="1020" cy="620" r="5"/>
+      <circle cx="1280" cy="520" r="4"/>
+      <circle cx="1520" cy="640" r="5"/>
+      <circle cx="1720" cy="560" r="4"/>
+      <circle cx="180" cy="680" r="4"/>
+      <circle cx="420" cy="820" r="5"/>
+      <circle cx="680" cy="760" r="4"/>
+      <circle cx="920" cy="880" r="5"/>
+      <circle cx="1180" cy="800" r="4"/>
+      <circle cx="1420" cy="900" r="5"/>
+      <circle cx="1680" cy="820" r="4"/>
+    </g>
+
+    <!-- Brighter nodes -->
+    <g fill="#60a5fa" opacity="0.6">
+      <circle cx="380" cy="320" r="2.5"/>
+      <circle cx="880" cy="280" r="2.5"/>
+      <circle cx="520" cy="540" r="2.5"/>
+      <circle cx="1020" cy="620" r="2.5"/>
+      <circle cx="940" cy="380" r="2.5"/>
+      <circle cx="920" cy="880" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- Hexagonal grid overlay -->
+  <g stroke="#3b82f6" stroke-width="0.5" fill="none" opacity="0.08">
+    <polygon points="100,100 140,80 180,100 180,140 140,160 100,140"/>
+    <polygon points="180,100 220,80 260,100 260,140 220,160 180,140"/>
+    <polygon points="260,100 300,80 340,100 340,140 300,160 260,140"/>
+    <polygon points="100,180 140,160 180,180 180,220 140,240 100,220"/>
+    <polygon points="180,180 220,160 260,180 260,220 220,240 180,220"/>
+    <polygon points="1600,800 1640,780 1680,800 1680,840 1640,860 1600,840"/>
+    <polygon points="1680,800 1720,780 1760,800 1760,840 1720,860 1680,840"/>
+    <polygon points="1520,880 1560,860 1600,880 1600,920 1560,940 1520,920"/>
+  </g>
+
+  <!-- Circuit traces -->
+  <g stroke="#06b6d4" stroke-width="0.8" fill="none" opacity="0.15">
+    <path d="M 0,500 L 100,500 L 120,480 L 200,480 L 220,500 L 300,500"/>
+    <path d="M 1620,700 L 1700,700 L 1720,720 L 1800,720 L 1820,700 L 1920,700"/>
+    <path d="M 0,900 L 80,900 L 100,880 L 160,880 L 180,900 L 240,900"/>
+    <path d="M 1680,100 L 1760,100 L 1780,120 L 1840,120 L 1860,100 L 1920,100"/>
+  </g>
+</svg>
