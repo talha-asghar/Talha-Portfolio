@@ -40,7 +40,7 @@ export default function CursorFollower() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-4 h-4 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full pointer-events-none z-[9999] shadow-[0_0_15px_rgba(59,130,246,0.8),0_0_30px_rgba(139,92,246,0.6)] mix-blend-screen"
+      className="hidden md:block fixed top-0 left-0 w-4 h-4 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full pointer-events-none z-[9999] shadow-[0_0_15px_rgba(59,130,246,0.8),0_0_30px_rgba(139,92,246,0.6)] mix-blend-screen"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,

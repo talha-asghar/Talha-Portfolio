@@ -85,8 +85,8 @@ export default function Hero() {
 
         <motion.div variants={fadeUp} className="mt-10 flex items-center justify-center gap-4">
           {[
-            { href: 'https://github.com/talha-54-ism', label: 'GitHub', icon: Github },
-            { href: 'https://linkedin.com/in/talha-asghar', label: 'LinkedIn', icon: Linkedin },
+            { href: 'https://github.com/talha-asghar', label: 'GitHub', icon: Github },
+            { href: 'https://linkedin.com/in/talha-asghar-996b79245', label: 'LinkedIn', icon: Linkedin },
           ].map(({ href, label, icon: Icon }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
               className="w-12 h-12 rounded-xl glass flex items-center justify-center text-slate-200 hover:text-blue-400 hover:shadow-neon-blue hover:scale-110 transition-all">
