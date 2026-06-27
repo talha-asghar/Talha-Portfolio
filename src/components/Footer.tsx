@@ -11,8 +11,8 @@ const NAV_LINKS = [
 const SERVICES = ['AI & RAG Integration', 'Full-Stack Web Development', 'Mobile App Development', 'Advanced AI Automation'];
 
 const SOCIAL = [
-  { href: 'https://github.com/talha-54-ism', icon: Github, label: 'GitHub' },
-  { href: 'https://linkedin.com/in/talha-asghar', icon: Linkedin, label: 'LinkedIn' },
+  { href: 'https://github.com/talha-asghar', icon: Github, label: 'GitHub' },
+  { href: 'https://linkedin.com/in/talha-asghar-996b79245', icon: Linkedin, label: 'LinkedIn' },
   { href: 'mailto:ta449011@gmail.com', icon: Mail, label: 'Email' },
 ];
 
